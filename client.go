@@ -50,59 +50,15 @@ type APIClient struct {
 
 	// API Services
 
-	AccountExportAPI *AccountExportAPIService
-
-	AccountExportsAPI *AccountExportsAPIService
-
-	ActivityFeedAPI *ActivityFeedAPIService
-
-	AuthorizedAppsAPI *AuthorizedAppsAPIService
-
-	AutomationsAPI *AutomationsAPIService
-
-	BatchWebhooksAPI *BatchWebhooksAPIService
-
-	BatchesAPI *BatchesAPIService
-
-	CampaignFoldersAPI *CampaignFoldersAPIService
-
 	CampaignsAPI *CampaignsAPIService
-
-	ConnectedSitesAPI *ConnectedSitesAPIService
 
 	ConversationsAPI *ConversationsAPIService
 
 	CustomerJourneysAPI *CustomerJourneysAPIService
 
-	EcommerceAPI *EcommerceAPIService
-
-	FacebookAdsAPI *FacebookAdsAPIService
-
-	FileManagerAPI *FileManagerAPIService
-
-	LandingPagesAPI *LandingPagesAPIService
-
-	ListsAPI *ListsAPIService
-
-	PingAPI *PingAPIService
-
-	ReportingAPI *ReportingAPIService
-
-	ReportsAPI *ReportsAPIService
-
-	RootAPI *RootAPIService
-
 	SearchCampaignsAPI *SearchCampaignsAPIService
 
 	SearchMembersAPI *SearchMembersAPIService
-
-	SurveysAPI *SurveysAPIService
-
-	TemplateFoldersAPI *TemplateFoldersAPIService
-
-	TemplatesAPI *TemplatesAPIService
-
-	VerifiedDomainsAPI *VerifiedDomainsAPIService
 }
 
 type service struct {
@@ -121,33 +77,11 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.AccountExportAPI = (*AccountExportAPIService)(&c.common)
-	c.AccountExportsAPI = (*AccountExportsAPIService)(&c.common)
-	c.ActivityFeedAPI = (*ActivityFeedAPIService)(&c.common)
-	c.AuthorizedAppsAPI = (*AuthorizedAppsAPIService)(&c.common)
-	c.AutomationsAPI = (*AutomationsAPIService)(&c.common)
-	c.BatchWebhooksAPI = (*BatchWebhooksAPIService)(&c.common)
-	c.BatchesAPI = (*BatchesAPIService)(&c.common)
-	c.CampaignFoldersAPI = (*CampaignFoldersAPIService)(&c.common)
 	c.CampaignsAPI = (*CampaignsAPIService)(&c.common)
-	c.ConnectedSitesAPI = (*ConnectedSitesAPIService)(&c.common)
 	c.ConversationsAPI = (*ConversationsAPIService)(&c.common)
 	c.CustomerJourneysAPI = (*CustomerJourneysAPIService)(&c.common)
-	c.EcommerceAPI = (*EcommerceAPIService)(&c.common)
-	c.FacebookAdsAPI = (*FacebookAdsAPIService)(&c.common)
-	c.FileManagerAPI = (*FileManagerAPIService)(&c.common)
-	c.LandingPagesAPI = (*LandingPagesAPIService)(&c.common)
-	c.ListsAPI = (*ListsAPIService)(&c.common)
-	c.PingAPI = (*PingAPIService)(&c.common)
-	c.ReportingAPI = (*ReportingAPIService)(&c.common)
-	c.ReportsAPI = (*ReportsAPIService)(&c.common)
-	c.RootAPI = (*RootAPIService)(&c.common)
 	c.SearchCampaignsAPI = (*SearchCampaignsAPIService)(&c.common)
 	c.SearchMembersAPI = (*SearchMembersAPIService)(&c.common)
-	c.SurveysAPI = (*SurveysAPIService)(&c.common)
-	c.TemplateFoldersAPI = (*TemplateFoldersAPIService)(&c.common)
-	c.TemplatesAPI = (*TemplatesAPIService)(&c.common)
-	c.VerifiedDomainsAPI = (*VerifiedDomainsAPIService)(&c.common)
 
 	return c
 }
