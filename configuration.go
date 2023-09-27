@@ -94,7 +94,7 @@ func NewConfiguration() *Configuration {
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "https://server.api.mailchimp.com/3.0",
+				URL: "https://us10.api.mailchimp.com/3.0",
 				Description: "No description provided",
 			},
 		},
